@@ -1,6 +1,12 @@
 # it is from http://r-spatial.org/r/2016/05/11/scalable-earth-observation-analytics.html
 # it is Marius Appel's work
 
+install.packages("MODIS", repos="http://R-Forge.R-project.org")
+setRepositories() # activate CRAN, R-forge, and Omegahat and then: 
+install.packages(c(' rgeos', 'maps', 'mapdata', 'ptw', 'XML '),dependencies=TRUE)
+install.packages('RCurl')
+install.packages('rgeos')
+
 require(MODIS)
 
 ## Loading required package: MODIS
