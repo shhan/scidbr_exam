@@ -23,7 +23,7 @@ require(MODIS)
 ##     file.size
 
 require(gdalUtils)
-MODISoptions(localArcPath = paste(getwd(), "MODIS", sep="/"))
+MODISoptions(localArcPath = paste(getwd(), "MODIS_ARC", sep="/"), outDirPath = paste(getwd(), "MODIS_ARC", "PROCESSED", sep="/"))
 
 ## To install all required and suggested packages run:
 ##  setRepositories() # activate CRAN, R-forge, and Omegahat and then: 
