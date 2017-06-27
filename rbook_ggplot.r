@@ -40,6 +40,10 @@ ggplot(data = mpg) +
   geom_point(mapping = aes(x = displ, y = hwy)) + 
   facet_grid(. ~ cyl)
 
+ggplot(data = mpg) + 
+  geom_point(mapping = aes(x = displ, y = hwy)) + 
+  facet_grid(. ~ displ)
+
 
 # hwy vs. cyl
 ggplot(data = mpg) + 
