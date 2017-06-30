@@ -1,7 +1,7 @@
 # it is from http://r-spatial.org/r/2016/05/11/scalable-earth-observation-analytics.html
 # it is Marius Appel's work
 
-install.packages("MODIS", repos="http://R-Forge.R-project.org")
+install.packages("MODIS")
 setRepositories() # activate CRAN, R-forge, and Omegahat and then: 
 install.packages(c(' rgeos', 'maps', 'mapdata', 'ptw', 'XML '),dependencies=TRUE)
 install.packages('RCurl')
@@ -64,8 +64,12 @@ MODISoptions(localArcPath = paste(getwd(), "MODIS_ARC", sep="/"), outDirPath = p
 ## DEPENDENCIES:
 ## _______________
 ## 
-
+setwd("/home2/scidb/work/scidbr_exam")
+source("mygetHdf.R")
+debugonce(getStruc)
+hdf.download = mygetHdf("MOD13A3",begin="2000-01-01", end="2005-01-01",tileH = 12, tileV = 9,collection = "005")
 hdf.download = getHdf("MOD13A3",begin="2000-01-01", end="2005-01-01",tileH = 12, tileV = 9,collection = "005")
+# download.file('ftp://ladsftp.nascom.nasa.gov/allData/6/MOD11C3/2007/182/MOD11C3.A2007182.006.2015321160040.hdf', tempfile())
 
 ## Loading required package: rgeos
 
