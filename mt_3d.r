@@ -64,10 +64,15 @@ MODISoptions(localArcPath = paste(getwd(), "MODIS_ARC", sep="/"), outDirPath = p
 ## DEPENDENCIES:
 ## _______________
 ## 
-setwd("/home2/scidb/work/scidbr_exam")
-source("mygetHdf.R")
-debugonce(getStruc)
-hdf.download = mygetHdf("MOD13A3",begin="2000-01-01", end="2005-01-01",tileH = 12, tileV = 9,collection = "005")
+# debug getHdf of Modis
+# setwd("/home2/scidb/work/scidbr_exam")
+# source("mygetHdf.R")
+# debugonce(getStruc)
+# hdf.download = mygetHdf("MOD13A3",begin="2000-01-01", end="2005-01-01",tileH = 12, tileV = 9,collection = "005")
+# https://e4ftl01.cr.usgs.gov/ shhan
+# for this, create or update .netrc on $HOME directory with "machine urs.earthdata.nasa.gov"
+#                                                           "login shhan"
+#                                                           "password xxxxxxxx" ; you need to create login id/passwd first.
 hdf.download = getHdf("MOD13A3",begin="2000-01-01", end="2005-01-01",tileH = 12, tileV = 9,collection = "005")
 # download.file('ftp://ladsftp.nascom.nasa.gov/allData/6/MOD11C3/2007/182/MOD11C3.A2007182.006.2015321160040.hdf', tempfile())
 
