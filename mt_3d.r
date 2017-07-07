@@ -3,7 +3,7 @@
 
 install.packages("MODIS")
 setRepositories() # activate CRAN, R-forge, and Omegahat and then: 
-install.packages(c(' rgeos', 'maps', 'mapdata', 'ptw', 'XML '),dependencies=TRUE)
+install.packages(c('rgeos', 'maps', 'mapdata', 'ptw', 'XML '),dependencies=TRUE)
 install.packages('RCurl')
 install.packages('rgeos')
 
