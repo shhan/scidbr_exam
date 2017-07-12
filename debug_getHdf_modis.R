@@ -6,3 +6,4 @@ source("minorFuns.R")
 debugonce(genString)
 
 hdf.download = mygetHdf("MOD13A3",begin="2000-01-01", end="2000-02-01",tileH = 12, tileV = 9,collection = "005")
+hdf.download = getHdf("MOD13A3",begin="2000-01-01", end="2000-02-01",tileH = 12, tileV = 9,collection = "005")
